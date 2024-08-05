@@ -11,11 +11,11 @@ import Combine
 class OnboardingViewModel: ObservableObject {
     @Published var hasCompletedOnboarding: Bool {
         didSet {
-            UserDefaults.standard.set(hasCompletedOnboarding, forKey: UserDefaultsKeys.universalKey)
+            UserDefaults.standard.set(hasCompletedOnboarding, forKey: Constants.universalKey)
         }
     }
     
     init() {
-        self.hasCompletedOnboarding = UserDefaults.standard.bool(forKey: UserDefaultsKeys.universalKey)
+        self.hasCompletedOnboarding = UserDefaults.standard.bool(forKey: Constants.universalKey)
     }
 }

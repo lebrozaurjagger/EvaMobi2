@@ -44,12 +44,12 @@ class LocationsModel: ObservableObject {
     
     private func saveLocations() {
         if let encodedData = try? JSONEncoder().encode(locations) {
-            UserDefaults.standard.set(encodedData, forKey: UserDefaultsKeys.universalKey)
+            UserDefaults.standard.set(encodedData, forKey: Constants.universalKey)
         }
     }
     
     private static func loadLocations() -> [Location] {
-        if let savedData = UserDefaults.standard.data(forKey: UserDefaultsKeys.universalKey),
+        if let savedData = UserDefaults.standard.data(forKey: Constants.universalKey),
            let decodedData = try? JSONDecoder().decode([Location].self, from: savedData) {
             return decodedData
         }

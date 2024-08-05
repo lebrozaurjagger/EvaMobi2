@@ -44,7 +44,7 @@ struct SettingsView: View {
                         StackCell(icon: "Star", name: "Privacy Policy")
                     }
                     .sheet(isPresented: $isPrivacySheetPresented) {
-                        WebView(urlString: "https://www.example.com")
+                        WebView(urlString: "https://www.termsfeed.com/live/00093203-96a9-4e04-b2e2-563460d0369e")
                     }
                 }
                 .foregroundColor(.black)

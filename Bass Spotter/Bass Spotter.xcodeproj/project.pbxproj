@@ -22,10 +22,45 @@
 		7C7D3E342C5CDBBE00685A06 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D3E332C5CDBBE00685A06 /* TopBarView.swift */; };
 		7C7D3E362C5CDBD000685A06 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D3E352C5CDBD000685A06 /* WebView.swift */; };
 		7C7D3E382C5CDBD900685A06 /* LocationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D3E372C5CDBD900685A06 /* LocationsModel.swift */; };
-		7C7D3E3A2C5CDC1C00685A06 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D3E392C5CDC1C00685A06 /* UserDefaultsKeys.swift */; };
+		7C7D3E3A2C5CDC1C00685A06 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D3E392C5CDC1C00685A06 /* Constants.swift */; };
 		7C7D3E3C2C5CDC3400685A06 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D3E3B2C5CDC3400685A06 /* ColorScheme.swift */; };
 		7C7D3E3E2C5CDC6500685A06 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D3E3D2C5CDC6500685A06 /* OnboardingViewModel.swift */; };
+		7C9D6EA22C5D2F5A00377FBB /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9D6EA12C5D2F5A00377FBB /* NotificationService.swift */; };
+		7C9D6EA62C5D2F5A00377FBB /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7C9D6E9F2C5D2F5A00377FBB /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7C9D6EAF2C5D306D00377FBB /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 7C9D6EAE2C5D306D00377FBB /* OneSignalExtension */; };
+		7C9D6EB12C5D306D00377FBB /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 7C9D6EB02C5D306D00377FBB /* OneSignalFramework */; };
+		7C9D6EB32C5D306D00377FBB /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 7C9D6EB22C5D306D00377FBB /* OneSignalInAppMessages */; };
+		7C9D6EB52C5D306D00377FBB /* OneSignalLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 7C9D6EB42C5D306D00377FBB /* OneSignalLocation */; };
+		7C9D6EB82C5D30C700377FBB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7C9D6EB72C5D30C700377FBB /* Alamofire */; };
+		7C9EEE342C5F5D7700B7ADA9 /* ExactWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9EEE332C5F5D7700B7ADA9 /* ExactWebView.swift */; };
+		7CF8836E2C5E18A800DBCB88 /* AppTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8836D2C5E18A800DBCB88 /* AppTracking.swift */; };
+		7CF883702C5E200300DBCB88 /* OneSignalPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8836F2C5E200300DBCB88 /* OneSignalPush.swift */; };
+		7CF883742C5E21CE00DBCB88 /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF883732C5E21CE00DBCB88 /* URLHandler.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C9D6EA42C5D2F5A00377FBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C7D3E062C5CDAEC00685A06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C9D6E9E2C5D2F5A00377FBB;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7C9D6EAA2C5D2F5A00377FBB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7C9D6EA62C5D2F5A00377FBB /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7C7D3E0E2C5CDAEC00685A06 /* Bass Spotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bass Spotter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,11 +79,20 @@
 		7C7D3E332C5CDBBE00685A06 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		7C7D3E352C5CDBD000685A06 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		7C7D3E372C5CDBD900685A06 /* LocationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsModel.swift; sourceTree = "<group>"; };
-		7C7D3E392C5CDC1C00685A06 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		7C7D3E392C5CDC1C00685A06 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7C7D3E3B2C5CDC3400685A06 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		7C7D3E3D2C5CDC6500685A06 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		7C7D3E3F2C5CDC8500685A06 /* PlusJakartaSans-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-VariableFont_wght.ttf"; path = "../../../PlusJakartaSans-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		7C7D3E402C5CDCAD00685A06 /* Bass-Spotter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bass-Spotter-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7C9D6E9F2C5D2F5A00377FBB /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C9D6EA12C5D2F5A00377FBB /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		7C9D6EA32C5D2F5A00377FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C9D6EAB2C5D2FAF00377FBB /* Bass Spotter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bass Spotter.entitlements"; sourceTree = "<group>"; };
+		7C9D6EAC2C5D2FEF00377FBB /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
+		7C9EEE332C5F5D7700B7ADA9 /* ExactWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactWebView.swift; sourceTree = "<group>"; };
+		7CF8836D2C5E18A800DBCB88 /* AppTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTracking.swift; sourceTree = "<group>"; };
+		7CF8836F2C5E200300DBCB88 /* OneSignalPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignalPush.swift; sourceTree = "<group>"; };
+		7CF883732C5E21CE00DBCB88 /* URLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +100,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C9D6EB32C5D306D00377FBB /* OneSignalInAppMessages in Frameworks */,
+				7C9D6EB82C5D30C700377FBB /* Alamofire in Frameworks */,
+				7C9D6EB52C5D306D00377FBB /* OneSignalLocation in Frameworks */,
+				7C9D6EB12C5D306D00377FBB /* OneSignalFramework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C9D6E9C2C5D2F5A00377FBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C9D6EAF2C5D306D00377FBB /* OneSignalExtension in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				7C7D3E102C5CDAEC00685A06 /* Bass Spotter */,
+				7C9D6EA02C5D2F5A00377FBB /* OneSignalNotificationServiceExtension */,
 				7C7D3E0F2C5CDAEC00685A06 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				7C7D3E0E2C5CDAEC00685A06 /* Bass Spotter.app */,
+				7C9D6E9F2C5D2F5A00377FBB /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,7 +139,9 @@
 		7C7D3E102C5CDAEC00685A06 /* Bass Spotter */ = {
 			isa = PBXGroup;
 			children = (
+				7C9D6EAB2C5D2FAF00377FBB /* Bass Spotter.entitlements */,
 				7C7D3E402C5CDCAD00685A06 /* Bass-Spotter-Info.plist */,
+				7CF883722C5E219700DBCB88 /* Fonts */,
 				7C7D3E222C5CDB0D00685A06 /* Helpers */,
 				7C7D3E212C5CDB0700685A06 /* Viewmodels */,
 				7C7D3E202C5CDB0200685A06 /* Models */,
@@ -115,6 +175,7 @@
 				7C7D3E312C5CDBAD00685A06 /* SettingsView.swift */,
 				7C7D3E332C5CDBBE00685A06 /* TopBarView.swift */,
 				7C7D3E352C5CDBD000685A06 /* WebView.swift */,
+				7C9EEE332C5F5D7700B7ADA9 /* ExactWebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,11 +199,39 @@
 		7C7D3E222C5CDB0D00685A06 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				7C7D3E3F2C5CDC8500685A06 /* PlusJakartaSans-VariableFont_wght.ttf */,
-				7C7D3E392C5CDC1C00685A06 /* UserDefaultsKeys.swift */,
+				7C7D3E392C5CDC1C00685A06 /* Constants.swift */,
 				7C7D3E3B2C5CDC3400685A06 /* ColorScheme.swift */,
+				7CF883712C5E218800DBCB88 /* SDKs */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7C9D6EA02C5D2F5A00377FBB /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				7C9D6EAC2C5D2FEF00377FBB /* OneSignalNotificationServiceExtension.entitlements */,
+				7C9D6EA12C5D2F5A00377FBB /* NotificationService.swift */,
+				7C9D6EA32C5D2F5A00377FBB /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		7CF883712C5E218800DBCB88 /* SDKs */ = {
+			isa = PBXGroup;
+			children = (
+				7CF8836D2C5E18A800DBCB88 /* AppTracking.swift */,
+				7CF8836F2C5E200300DBCB88 /* OneSignalPush.swift */,
+				7CF883732C5E21CE00DBCB88 /* URLHandler.swift */,
+			);
+			path = SDKs;
+			sourceTree = "<group>";
+		};
+		7CF883722C5E219700DBCB88 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7C7D3E3F2C5CDC8500685A06 /* PlusJakartaSans-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,15 +244,43 @@
 				7C7D3E0A2C5CDAEC00685A06 /* Sources */,
 				7C7D3E0B2C5CDAEC00685A06 /* Frameworks */,
 				7C7D3E0C2C5CDAEC00685A06 /* Resources */,
+				7C9D6EAA2C5D2F5A00377FBB /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C9D6EA52C5D2F5A00377FBB /* PBXTargetDependency */,
+			);
+			name = "Bass Spotter";
+			packageProductDependencies = (
+				7C9D6EB02C5D306D00377FBB /* OneSignalFramework */,
+				7C9D6EB22C5D306D00377FBB /* OneSignalInAppMessages */,
+				7C9D6EB42C5D306D00377FBB /* OneSignalLocation */,
+				7C9D6EB72C5D30C700377FBB /* Alamofire */,
+			);
+			productName = "Bass Spotter";
+			productReference = 7C7D3E0E2C5CDAEC00685A06 /* Bass Spotter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7C9D6E9E2C5D2F5A00377FBB /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C9D6EA72C5D2F5A00377FBB /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				7C9D6E9B2C5D2F5A00377FBB /* Sources */,
+				7C9D6E9C2C5D2F5A00377FBB /* Frameworks */,
+				7C9D6E9D2C5D2F5A00377FBB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Bass Spotter";
-			productName = "Bass Spotter";
-			productReference = 7C7D3E0E2C5CDAEC00685A06 /* Bass Spotter.app */;
-			productType = "com.apple.product-type.application";
+			name = OneSignalNotificationServiceExtension;
+			packageProductDependencies = (
+				7C9D6EAE2C5D306D00377FBB /* OneSignalExtension */,
+			);
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 7C9D6E9F2C5D2F5A00377FBB /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -178,6 +295,9 @@
 					7C7D3E0D2C5CDAEC00685A06 = {
 						CreatedOnToolsVersion = 15.2;
 					};
+					7C9D6E9E2C5D2F5A00377FBB = {
+						CreatedOnToolsVersion = 15.2;
+					};
 				};
 			};
 			buildConfigurationList = 7C7D3E092C5CDAEC00685A06 /* Build configuration list for PBXProject "Bass Spotter" */;
@@ -189,11 +309,16 @@
 				Base,
 			);
 			mainGroup = 7C7D3E052C5CDAEC00685A06;
+			packageReferences = (
+				7C9D6EAD2C5D306D00377FBB /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
+				7C9D6EB62C5D30C700377FBB /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 7C7D3E0F2C5CDAEC00685A06 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				7C7D3E0D2C5CDAEC00685A06 /* Bass Spotter */,
+				7C9D6E9E2C5D2F5A00377FBB /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -205,6 +330,13 @@
 			files = (
 				7C7D3E192C5CDAEE00685A06 /* Preview Assets.xcassets in Resources */,
 				7C7D3E162C5CDAEE00685A06 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C9D6E9D2C5D2F5A00377FBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,19 +354,39 @@
 				7C7D3E142C5CDAEC00685A06 /* ContentView.swift in Sources */,
 				7C7D3E302C5CDBA000685A06 /* OnboardingView.swift in Sources */,
 				7C7D3E382C5CDBD900685A06 /* LocationsModel.swift in Sources */,
+				7C9EEE342C5F5D7700B7ADA9 /* ExactWebView.swift in Sources */,
 				7C7D3E242C5CDB2D00685A06 /* CardView.swift in Sources */,
 				7C7D3E322C5CDBAD00685A06 /* SettingsView.swift in Sources */,
 				7C7D3E2A2C5CDB6C00685A06 /* HomeView.swift in Sources */,
-				7C7D3E3A2C5CDC1C00685A06 /* UserDefaultsKeys.swift in Sources */,
+				7CF883742C5E21CE00DBCB88 /* URLHandler.swift in Sources */,
+				7CF8836E2C5E18A800DBCB88 /* AppTracking.swift in Sources */,
+				7C7D3E3A2C5CDC1C00685A06 /* Constants.swift in Sources */,
 				7C7D3E262C5CDB4700685A06 /* ExploreView.swift in Sources */,
 				7C7D3E342C5CDBBE00685A06 /* TopBarView.swift in Sources */,
 				7C7D3E362C5CDBD000685A06 /* WebView.swift in Sources */,
 				7C7D3E2C2C5CDB7B00685A06 /* LoadingView.swift in Sources */,
+				7CF883702C5E200300DBCB88 /* OneSignalPush.swift in Sources */,
 				7C7D3E122C5CDAEC00685A06 /* Bass_SpotterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7C9D6E9B2C5D2F5A00377FBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C9D6EA22C5D2F5A00377FBB /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7C9D6EA52C5D2F5A00377FBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C9D6E9E2C5D2F5A00377FBB /* OneSignalNotificationServiceExtension */;
+			targetProxy = 7C9D6EA42C5D2F5A00377FBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7C7D3E1A2C5CDAEE00685A06 /* Debug */ = {
@@ -359,14 +511,18 @@
 		7C7D3E1D2C5CDAEE00685A06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Bass Spotter/Bass Spotter.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bass Spotter/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bass-Spotter-Info.plist";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -389,14 +545,18 @@
 		7C7D3E1E2C5CDAEE00685A06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Bass Spotter/Bass Spotter.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bass Spotter/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bass-Spotter-Info.plist";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -410,6 +570,60 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "pkotenko.Bass-Spotter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7C9D6EA82C5D2F5A00377FBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pkotenko.Bass-Spotter.OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7C9D6EA92C5D2F5A00377FBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pkotenko.Bass-Spotter.OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -437,7 +651,63 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		7C9D6EA72C5D2F5A00377FBB /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C9D6EA82C5D2F5A00377FBB /* Debug */,
+				7C9D6EA92C5D2F5A00377FBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7C9D6EAD2C5D306D00377FBB /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
+		7C9D6EB62C5D30C700377FBB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7C9D6EAE2C5D306D00377FBB /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C9D6EAD2C5D306D00377FBB /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalExtension;
+		};
+		7C9D6EB02C5D306D00377FBB /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C9D6EAD2C5D306D00377FBB /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalFramework;
+		};
+		7C9D6EB22C5D306D00377FBB /* OneSignalInAppMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C9D6EAD2C5D306D00377FBB /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalInAppMessages;
+		};
+		7C9D6EB42C5D306D00377FBB /* OneSignalLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C9D6EAD2C5D306D00377FBB /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalLocation;
+		};
+		7C9D6EB72C5D30C700377FBB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C9D6EB62C5D30C700377FBB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7C7D3E062C5CDAEC00685A06 /* Project object */;
 }
