@@ -10,7 +10,6 @@ import OneSignalFramework
 import AppTrackingTransparency
 
 struct OnesignalPush {
-    
     static var launch: [UIApplication.LaunchOptionsKey: Any]?
     
     static func initPush(completion: @escaping (ATTrackingManager.AuthorizationStatus) -> Void) {

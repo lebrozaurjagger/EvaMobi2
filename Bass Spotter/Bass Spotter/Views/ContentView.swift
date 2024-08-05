@@ -6,8 +6,7 @@
 //
 
 import SwiftUI
-import UserNotifications
-import AppTrackingTransparency
+import OneSignalFramework
 
 struct ContentView: View {
     @StateObject private var onboardingViewModel = OnboardingViewModel()
@@ -25,7 +24,7 @@ struct ContentView: View {
                 LoadingView()
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                            requestNotificationPermission()
+                            requestPermissions()
                         }
                     }
             } else {
@@ -42,26 +41,11 @@ struct ContentView: View {
         }
     }
     
-    func requestNotificationPermission() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
-            DispatchQueue.main.async {
-                self.isNotificationsAllowed = granted
-                self.requestTrackingPermission()
-            }
-        }
-    }
-    
-    func requestTrackingPermission() {
-        if #available(iOS 14, *) {
-            ATTrackingManager.requestTrackingAuthorization { status in
-                DispatchQueue.main.async {
-                    self.isTrackingAllowed = (status == .authorized)
-                    self.isWebView = true
-                    self.showLoadingView = false
-                }
-            }
-        } else {
-            self.isTrackingAllowed = true
+    private func requestPermissions() {
+        OnesignalPush.initPush { status in
+            self.isTrackingAllowed = (status == .authorized)
+            self.isNotificationsAllowed = OneSignal.Notifications.permission
+            
             self.isWebView = true
             self.showLoadingView = false
         }

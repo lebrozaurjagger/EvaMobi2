@@ -18,7 +18,7 @@ struct Constants {
     }
     
     static let dashApi = ""
-    static let onesignalKey = ""
+    static let onesignalKey = "8bcef81a-1016-4ddc-abbe-be77519ed66a"
     
     static var idfa: String {
         ASIdentifierManager.shared().advertisingIdentifier.uuidString
