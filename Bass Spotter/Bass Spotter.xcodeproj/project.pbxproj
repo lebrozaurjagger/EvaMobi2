@@ -32,7 +32,6 @@
 		7C9D6EB32C5D306D00377FBB /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 7C9D6EB22C5D306D00377FBB /* OneSignalInAppMessages */; };
 		7C9D6EB52C5D306D00377FBB /* OneSignalLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 7C9D6EB42C5D306D00377FBB /* OneSignalLocation */; };
 		7C9D6EB82C5D30C700377FBB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7C9D6EB72C5D30C700377FBB /* Alamofire */; };
-		7C9EEE342C5F5D7700B7ADA9 /* ExactWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9EEE332C5F5D7700B7ADA9 /* ExactWebView.swift */; };
 		7CF8836E2C5E18A800DBCB88 /* AppTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8836D2C5E18A800DBCB88 /* AppTracking.swift */; };
 		7CF883702C5E200300DBCB88 /* OneSignalPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8836F2C5E200300DBCB88 /* OneSignalPush.swift */; };
 		7CF883742C5E21CE00DBCB88 /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF883732C5E21CE00DBCB88 /* URLHandler.swift */; };
@@ -89,7 +88,6 @@
 		7C9D6EA32C5D2F5A00377FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C9D6EAB2C5D2FAF00377FBB /* Bass Spotter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bass Spotter.entitlements"; sourceTree = "<group>"; };
 		7C9D6EAC2C5D2FEF00377FBB /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
-		7C9EEE332C5F5D7700B7ADA9 /* ExactWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactWebView.swift; sourceTree = "<group>"; };
 		7CF8836D2C5E18A800DBCB88 /* AppTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTracking.swift; sourceTree = "<group>"; };
 		7CF8836F2C5E200300DBCB88 /* OneSignalPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignalPush.swift; sourceTree = "<group>"; };
 		7CF883732C5E21CE00DBCB88 /* URLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandler.swift; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 				7C7D3E312C5CDBAD00685A06 /* SettingsView.swift */,
 				7C7D3E332C5CDBBE00685A06 /* TopBarView.swift */,
 				7C7D3E352C5CDBD000685A06 /* WebView.swift */,
-				7C9EEE332C5F5D7700B7ADA9 /* ExactWebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -354,7 +351,6 @@
 				7C7D3E142C5CDAEC00685A06 /* ContentView.swift in Sources */,
 				7C7D3E302C5CDBA000685A06 /* OnboardingView.swift in Sources */,
 				7C7D3E382C5CDBD900685A06 /* LocationsModel.swift in Sources */,
-				7C9EEE342C5F5D7700B7ADA9 /* ExactWebView.swift in Sources */,
 				7C7D3E242C5CDB2D00685A06 /* CardView.swift in Sources */,
 				7C7D3E322C5CDBAD00685A06 /* SettingsView.swift in Sources */,
 				7C7D3E2A2C5CDB6C00685A06 /* HomeView.swift in Sources */,

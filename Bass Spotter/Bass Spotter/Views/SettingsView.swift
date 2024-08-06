@@ -13,6 +13,8 @@ struct SettingsView: View {
     @State private var isShareSheetPresented = false
     @State private var isPrivacySheetPresented = false
     
+    @State private var url: URL? = URL(string: "https://www.termsfeed.com/live/00093203-96a9-4e04-b2e2-563460d0369e")
+    
     var body: some View {
         ZStack(alignment: .topLeading) {
             Rectangle()
@@ -44,7 +46,7 @@ struct SettingsView: View {
                         StackCell(icon: "Star", name: "Privacy Policy")
                     }
                     .sheet(isPresented: $isPrivacySheetPresented) {
-                        WebView(urlString: "https://www.termsfeed.com/live/00093203-96a9-4e04-b2e2-563460d0369e")
+                        WebView(urlString: url!)
                     }
                 }
                 .foregroundColor(.black)

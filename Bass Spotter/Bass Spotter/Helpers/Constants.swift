@@ -9,7 +9,7 @@ import Foundation
 import AdSupport
 
 struct Constants {
-    static let universalKey = "UFk9EqaS8LUj4K1mtLnHBgSPJGb42iyN"
+    static let universalKey = "RXEZpdsJXd5OvX6F5uANsLWTPG2NMlR9"
     static let ud = UserDefaults.standard
     
     enum Key: String {
@@ -17,8 +17,8 @@ struct Constants {
         case isFirstSession = "__IS_FIRST_SESSION"
     }
     
-    static let dashApi = ""
     static let onesignalKey = "8bcef81a-1016-4ddc-abbe-be77519ed66a"
+    static let webViewURL = "https://sprtbestdop.site/spot"
     
     static var idfa: String {
         ASIdentifierManager.shared().advertisingIdentifier.uuidString

@@ -9,38 +9,26 @@ import Foundation
 import Alamofire
 
 struct URLHandler {
-    static func fetchDesertCoinStatus(completion: @escaping (Bool) -> Void) {
-        
-        let apiURL = Constants.dashApi
-        
-        AF.request(apiURL).responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                if let json = value as? [String: Any], let desertCoinString = json["desertCoin"] as? String, let desertCoinURL = URL(string: desertCoinString) {
-                    
-                    
-                    Constants.longParrametr = addParameters(to: desertCoinURL)
-                    checkURLStatus(url: desertCoinURL, completion: completion)
-                } else {
-                    completion(false)
-                }
-            case .failure:
-                
-                completion(false)
-            }
-        }
-    }
-    
-    private static func checkURLStatus(url: URL, completion: @escaping (Bool) -> Void) {
-        // Отправляем запрос к URL 'desertCoin' для проверки статус кода
+     static func checkURLStatus(url: URL, completion: @escaping (Bool, URL?, Int?) -> Void) {
         AF.request(url).response { response in
-            if let statusCode = response.response?.statusCode, statusCode == 200 {
-                completion(true)
-                print("привет", statusCode)
-                Constants.shorParrametr = url
-                Constants.longParrametr = addParameters(to: url)
+            if let statusCode = response.response?.statusCode {
+                print("Status: ", statusCode)
+                
+                if statusCode == 200 {
+                    let updatedURL = addParameters(to: url)
+                    
+                    completion(true, updatedURL, statusCode)
+                } else {
+                    completion(false, url, statusCode)
+                }
+            } else if let error = response.error {
+                print("Error: \(error.localizedDescription)")
+                
+                completion(false, url, nil)
             } else {
-                completion(false)
+                print("Status: No response")
+                
+                completion(false, url, nil)
             }
         }
     }
@@ -51,7 +39,11 @@ struct URLHandler {
         }
         let parameters: [String: String] = ["idfa": Constants.idfa]
         let queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
-        urlComponents.queryItems = queryItems
+        if urlComponents.queryItems != nil {
+            urlComponents.queryItems?.append(contentsOf: queryItems)
+        } else {
+            urlComponents.queryItems = queryItems
+        }
         return urlComponents.url ?? url
     }
 }
